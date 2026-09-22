@@ -14,11 +14,27 @@ public class Interfaz {
 
             System.out.print("¿Qué nivel quieres usar? (1, 2, 3 o 4) 0 para salir: ");
             numero = teclado.nextInt();
+            teclado.nextLine();
 
             switch (numero) {
                 case 1:
                     System.out.println("Nivel 1");
-                    Lanzador.nivel1();
+                    String entrada;
+                    while (true) {
+
+                        System.out.print("Introduce un número o escribe 'salir': ");
+                        entrada = teclado.nextLine();
+
+                        if (entrada.equalsIgnoreCase("salir")) {
+                            break;
+                        }
+
+                        int numeroN1 = Integer.parseInt(entrada);
+                        String resultado = Lanzador.factor(numeroN1);
+                        System.out.println("Resultado: " + resultado);
+
+                    }
+
                     break;
 
 
