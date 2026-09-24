@@ -1,12 +1,11 @@
 package javier.casal;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Lanzador {
 
     public static void main(String[] args) {}
-    public static String factor(int num) {
+    public static String factor(int num, int nivel) {
 
         System.out.println("[LOG] Has entrado en la funcion factor()");
         System.out.println("[LOG] numero entregado: " + num);
@@ -38,9 +37,20 @@ public class Lanzador {
         // Captura cualquier excepción que se produzca dentro del bloque try
         } catch (Exception excepcion) {
 
-            // Muestra por consola un mensaje de error
-            System.out.println("Error: " + excepcion.getMessage());
+            // Muestra por consola un mensaje de error dependiendo de si es nivel 1 o 2
+            if  (nivel == 1) {
+                System.out.println(excepcion.getMessage());
+                System.out.println("[LOG] nivel 1");
+            }
+            else if (nivel == 2 && nivel == 3) {
+                System.out.println("[Error] " + excepcion.getMessage());
+                System.out.println("[LOG] nivel 2 o 3");
+            }
+            else if (nivel == 3) {
+                String err = "[Error] " + excepcion.getMessage();
+                guardarError(err);
 
+            }
         }
 
         return sol;
@@ -48,15 +58,28 @@ public class Lanzador {
 
 
 
-        public static void nivel2 () {
+        public static void guardarError(String mensaje) {
+            try (PrintWriter log = new PrintWriter( new FileWriter("factor_error.log", true))) {
+                log.println(mensaje);
+            }
 
-            System.out.println("Nivel2");
+            catch (IOException error) {
+                System.out.println("No se pudo escribir en el archivo de log.");
+            }
+
         }
 
-        public static void nivel3 () {
-
-            System.out.println("Nivel3");
+    public static void guardarOutput(String mensaje) {
+        try (PrintWriter log = new PrintWriter( new FileWriter("factor_output.log", true))) {
+            log.println(mensaje);
         }
+
+        catch (IOException error) {
+            System.out.println("No se pudo escribir en el archivo de log.");
+        }
+
+    }
+
         public static void nivel4 () {
 
             System.out.println("Nivel4");
