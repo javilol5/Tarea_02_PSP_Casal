@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Interfaz {
 
+    public static final String RED = "\u001B[31m";
+    public static final String RESET = "\u001B[0m";
+
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
@@ -29,7 +32,15 @@ public class Interfaz {
                             break;
                         }
 
-                        int numeroN1 = Integer.parseInt(entrada);
+                        int numeroN1;
+
+                        try {
+                            numeroN1 = Integer.parseInt(entrada);
+                        } catch (NumberFormatException excepcion) {
+                            System.out.println(RED + "\'" + entrada + "\'" + RESET + " no es un numero valido");
+                            continue;
+                        }
+
                         String resultado = Lanzador.factor(numeroN1);
                         System.out.println("Resultado: " + resultado);
 
