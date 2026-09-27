@@ -13,7 +13,7 @@ public class Interfaz {
 
         int nivel = -1;
 
-        while (nivel != 0) {
+        while (true) {
 
             System.out.print("¿Qué nivel quieres usar? (1, 2, 3 o 4) 0 para salir: ");
             nivel = teclado.nextInt();
@@ -82,6 +82,7 @@ public class Interfaz {
                     String resultado3 = Lanzador.factor(numeroN1, nivel);
 
                     if (resultado3.isEmpty()) {
+                        Lanzador.guardarError("[ERROR]: input inexistente");
                         break;
                     } else {
                         Lanzador.guardarOutput("[OK] Resultado: " + resultado3);
@@ -90,7 +91,9 @@ public class Interfaz {
 
                 case 4:
                     System.out.println("Nivel " + nivel);
-                    Lanzador.nivel4();
+                    String resultado4 = Lanzador.factor(numeroN1, nivel);
+
+                    Lanzador.esPrimo(resultado4);
                     break;
 
                 case 0:

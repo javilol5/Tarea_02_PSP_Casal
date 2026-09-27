@@ -84,7 +84,7 @@ public class Lanzador {
             log.println(mensaje);
 
         } catch (IOException error) {
-            System.out.println("No se pudo escribir en el archivo de log.");
+            System.out.println("No se pudo escribir en el archivo de log de errores");
         }
     }
 
@@ -92,19 +92,30 @@ public class Lanzador {
 
         try (PrintWriter log = new PrintWriter(
                 new FileWriter(System.getProperty("user.dir")
-                        + File.separator + "src/main/java/javier/casal/factor_output.log", true))) {
+                        + File.separator
+                        + "src/main/java/javier/casal/factor_output.log", true))) {
 
             log.println(mensaje);
 
         } catch (IOException error) {
-            System.out.println("No se pudo escribir en el archivo de log.");
+            System.out.println("No se pudo escribir en el archivo de log de outputs");
         }
     }
 
 
-        public static void nivel4 () {
+    public static void esPrimo(String mensaje) {
+        String[] partes = mensaje.split(":");
 
-            System.out.println("Nivel4");
+        String numero = partes[0].trim();
+        String factores = partes[1].trim();
+
+        if (factores.equals(numero)) {
+            Lanzador.guardarOutput("El numero " + numero + " es primo");
+            System.out.println("Es primo: " + numero);
+        } else {
+            Lanzador.guardarOutput("El numero " + numero + " no es primo");
+            System.out.println("No es primo: " + numero);
+        }
     }
 }
 
