@@ -50,9 +50,12 @@ public class Interfaz {
                     System.out.println("[LOG] nivel 2");
                     continue;
                 }
+                else if (nivel == 3) {
+                    Lanzador.guardarError(excepcion.getMessage());
+                }
 
 
-                System.out.println( RED + "'" + entrada + "'" + RESET + " no es un número válido" );
+                //System.out.println( RED + "'" + entrada + "'" + RESET + " no es un número válido" );
                 continue;
             }
 
@@ -77,7 +80,12 @@ public class Interfaz {
                 case 3:
                     System.out.println("Nivel " + nivel);
                     String resultado3 = Lanzador.factor(numeroN1, nivel);
-                    Lanzador.guardarOutput("[OK] Resultado: " + resultado3);
+
+                    if (resultado3.isEmpty()) {
+                        break;
+                    } else {
+                        Lanzador.guardarOutput("[OK] Resultado: " + resultado3);
+                    }
                     break;
 
                 case 4:

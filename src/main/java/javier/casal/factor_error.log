@@ -1,0 +1,12 @@
+For input string: "asd"
+Cannot run program "factor": CreateProcess error=2, El sistema no puede encontrar el archivo especificado
+For input string: "dsa"
+Cannot run program "factor": CreateProcess error=2, El sistema no puede encontrar el archivo especificado
+For input string: "qwerty"
+For input string: ""
+For input string: "as"
+Cannot run program "factor": CreateProcess error=2, El sistema no puede encontrar el archivo especificado
+Cannot run program "factor": CreateProcess error=2, El sistema no puede encontrar el archivo especificado
+For input string: ""
+For input string: "asd"
+For input string: "qwe3"
