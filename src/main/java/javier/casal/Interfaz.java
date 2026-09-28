@@ -15,7 +15,7 @@ public class Interfaz {
 
         while (true) {
 
-            System.out.print("¿Qué nivel quieres usar? (1, 2, 3 o 4) 0 para salir: ");
+            System.out.print("¿Qué nivel quieres usar? (1, 2, 3 o 4) 0 para salir:      CASAL");
             nivel = teclado.nextInt();
             teclado.nextLine();
 
@@ -85,6 +85,7 @@ public class Interfaz {
                         Lanzador.guardarError("[ERROR]: input inexistente");
                         break;
                     } else {
+                        System.out.println("[OK] Resultado: " + resultado3);
                         Lanzador.guardarOutput("[OK] Resultado: " + resultado3);
                     }
                     break;

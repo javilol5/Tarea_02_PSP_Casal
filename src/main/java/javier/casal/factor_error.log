@@ -18,3 +18,8 @@ Cannot run program "factor": CreateProcess error=2, El sistema no puede encontra
 Cannot run program "factor": CreateProcess error=2, El sistema no puede encontrar el archivo especificado
 Cannot run program "factor": CreateProcess error=2, El sistema no puede encontrar el archivo especificado
 [ERROR]: input inexistente
+For input string: "asd"
+factor: opción inválida -- '5'
+Pruebe 'factor --help' para más información.
+For input string: "hola3"
+

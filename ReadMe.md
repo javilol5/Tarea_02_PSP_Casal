@@ -2,13 +2,13 @@
 
 
 
-| Valor | Salida de Factor                    | Código de Salida | 
+| Valor | Salida de Factor         | Código de Salida | 
 | :--- |:------------------------------------|:-----------------|
-| **360** |   	360: 2 2 2 3 3 5                                  | 0                | 
-| **1** | 1:                                  | 0                |
-| **17** | 17:17                               | 0                |
-| **hola** | factor: "hola": argumento no valido | 1                |
-| **-5** | -5                                  | 0                |
+| **360** |   	Resultado: 360: 2 2 2 3 3 5     | 0     | 
+| **1** | Resultado: 1:         | 0      |
+| **17** | Resultado: 17: 17          | 0      |
+| **hola** | 'hola' no es un número válido |  ninguno |
+| **-5** | Resultado: null     | 1    |
 
 ---
 
@@ -20,16 +20,19 @@
 ![TestCorrectoNivel1](src/images/TestCorrectoN1.png)
 
 ## Test incorrecto Nivel 1
-![TestIncorrectoNivel1](src/images/TestIncorrectoN1.png)
+![TestIncorrectoNivel1](src/images/TestIncorrectoN4.png)
+
+## Test salir
+![TestSalir](src/images/Salir.png)
 
 ## Test correcto Nivel 2
-![TestCorrectoNivel2](src/images/TestCorrectoN2.png)
+![TestCorrectoNivel2](src/images/TestCorrectoN4.png)
 
 ## Test incorrecto Nivel 2
-![TestIncorrectoNivel1](src/images/TestIncorrectoN2.png)
+![TestIncorrectoNivel1](src/images/FactorErrorLog.png)
 
 ## Test correcto Nivel 3
-![TestCorrectoNivel3](src/images/TestCorrectoN3.png)
+![TestCorrectoNivel3](src/images/FactorOutputLog.png)
 
 ## Test incorrecto Nivel 3
 ![TestIncorrectoNivel1](src/images/TestIncorrectoN3.png)
@@ -41,7 +44,7 @@
 ![FactorOutputLog](src/images/FactorOutputLog.png)
 
 ## Test correcto Nivel 4
-![TestCorrectoNivel4](src/images/TestCorrectoN4.png)
+![TestCorrectoNivel4](src/images/TestIncorrectoN1.png)
 
 ## Test incorrecto Nivel 4
-![TestIncorrectoNivel1](src/images/TestIncorrectoN4.png)
+![TestIncorrectoNivel1](src/images/Salir.png)
